@@ -1,4 +1,6 @@
 import discord
+import os
+
 client=discord.Client()
 def codeup(ex):
     if len(ex)==1:
@@ -174,4 +176,6 @@ async def on_message(message):
                             page="https://codeforces.com/ratings/page/"+ex[2]
                             await message.channel.send(page)
                 
-client.run("Nzg1NzkxNzY3ODMyMDM1MzQ4.X88_nA.qG_-XJmtyX24eeelYh8GmBQquWc")
+                
+access_token=os.environ["BOT_TOKEN"]
+client.run(access_token)
